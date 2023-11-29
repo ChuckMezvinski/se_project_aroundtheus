@@ -122,7 +122,6 @@
   }
 
   .profile__add-button {
-    margin: 0;
     min-width: 50px;
   }
 }
@@ -143,7 +142,6 @@
   .profile__title {
     max-width: 196px;
     font-size: 22px;
-    margin: 0;
     line-height: normal;
   }
 
@@ -162,7 +160,6 @@
 
   .profile__add-button {
     background: transparent url(../images/Plus.svg) center no-repeat;
-    margin: 0;
     margin-top: 36px;
     width: 282px;
   }
