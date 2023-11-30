@@ -1,4 +1,4 @@
-# Project 3: Around The U.S.
+Project 3: Around The U.S.
 
 ### Overview
 
@@ -7,7 +7,8 @@
 - Images
 
 **Intro**
-https://username.github.io/se_project_aroundtheus
+https://ChuckMezvinski.github.io/se_project_aroundtheus
+This project we used advanced css and html in order to create a more interactive website. We used figma to figure at the design aspect and ratios as well as using it to to recieve the photos
 This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
 
 **Figma**
