@@ -71,7 +71,7 @@
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 415px;
+  max-width: 320px;
   overflow: hidden;
 }
 
@@ -115,7 +115,6 @@
 
   .profile__description {
     text-align: center;
-    text-overflow: ellipsis;
   }
 
   .profile__edit-button {
