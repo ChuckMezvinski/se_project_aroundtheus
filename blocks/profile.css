@@ -115,6 +115,7 @@
 
   .profile__description {
     text-align: center;
+    text-overflow: ellipsis;
   }
 
   .profile__edit-button {
