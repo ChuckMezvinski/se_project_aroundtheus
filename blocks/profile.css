@@ -93,12 +93,10 @@
     min-width: 75px;
   }
 }
-
+@media screen and (max-width: 780px) {
+  font-size: 28px;
+}
 @media screen and (min-width: 621px) and (max-width: 900px) {
-  .profile {
-    justify-content: space-between;
-  }
-
   .profile__info {
     display: flex;
     justify-content: start;
@@ -138,6 +136,7 @@
   .profile__info {
     display: flex;
     flex-wrap: wrap;
+    max-width: 282px;
   }
 
   .profile__title {
@@ -154,9 +153,8 @@
   }
 
   .profile__description {
-    min-width: 100%;
+    max-width: 282px;
     font-size: 14px;
-    display: flex;
     justify-content: center;
   }
 
