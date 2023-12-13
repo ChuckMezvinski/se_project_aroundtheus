@@ -48,7 +48,7 @@
   justify-self: end;
   margin-top: 15px;
   box-sizing: content-box;
-  background-image: url(../images/vector\ add.png);
+  background-image: url(../images/vector\ arrow.svg);
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
@@ -63,7 +63,7 @@
   border: 2px solid white;
   justify-self: end;
   align-self: center;
-  background-image: url(../images/Vector\ slash.png);
+  background-image: url(../images/vector\ plus.svg);
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
@@ -108,6 +108,7 @@
   .profile__title {
     font-size: 22px;
     line-height: 1.2;
+    max-width: 240px;
   }
   .profile__subheading {
     font-size: 14px;
