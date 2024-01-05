@@ -97,3 +97,12 @@
     width: 282px;
   }
 }
+@media screen and (max-width: 400px) {
+  .modal__container {
+    max-width: 200px;
+    height: 275x;
+  }
+  .modal__input {
+    width: fit-content;
+  }
+}
