@@ -27,7 +27,11 @@
             <button class="profile__arrow" type="button"></button>
             <p class="profile__subheading">Explorer</p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button
+            class="profile__add-button"
+            id="add-button"
+            type="button"
+          ></button>
         </section>
         <ul class="card-wrapper"></ul>
       </main>
@@ -52,6 +56,29 @@
             class="modal__input"
             name="subheading"
             placeholder="Description"
+            id="modal__input-description"
+          />
+          <button class="modal__button">Save</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-card-edit">
+      <div class="modal__container">
+        <form class="modal__form" id="modal-edit-form">
+          <button class="modal__close"></button>
+          <p class="modal__heading">New Place</p>
+          <input
+            type="text"
+            class="modal__input"
+            name="title"
+            placeholder="Title"
+            id="modal__input-name"
+          />
+          <input
+            type="text"
+            class="modal__input"
+            name="Link"
+            placeholder="Image Link"
             id="modal__input-description"
           />
           <button class="modal__button">Save</button>
