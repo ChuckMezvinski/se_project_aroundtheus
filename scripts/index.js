@@ -69,6 +69,7 @@ function openPopup(popup) {
 const cardModalClose = document.querySelector("#card-modal-close");
 
 cardModalClose.addEventListener("click", () => {
+  console.log("Hello World")
   openPopup(cardEditModal);
 });
 
