@@ -73,7 +73,7 @@ cardModalClose.addEventListener("click", () => {
 });
 
 profileModalClose.addEventListener("click", () => {
-  openPopup();
+  openPopup(profileEditModal);
 });
 
 profileEditForm.addEventListener("submit", (e) => {
