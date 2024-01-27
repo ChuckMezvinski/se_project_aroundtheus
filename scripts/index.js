@@ -63,8 +63,8 @@ profileEditButton.addEventListener("click", () => {
   profileEditModal.classList.add("modal_opened");
 });
 
-function openPopup(popup) {
-  popup.classList.add("modal_opened");
+cardAddButton.addEventListener (event => {
+  openPopup(cardEditModal)
 }
 const cardModalClose = document.querySelector("#card-modal-close");
 
