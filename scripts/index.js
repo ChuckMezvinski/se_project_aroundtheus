@@ -35,7 +35,9 @@ const modalInputDescription = document.querySelector(
 );
 const cardEditModal = document.querySelector("#modal-card-edit");
 const cardAddButton = document.querySelector("#add-button");
-
+cardAddButton.addEventListener("click", () => {
+  openPopup(cardEditModal);
+})
 const profileModalClose = document.querySelector(".modal__close");
 
 const profileEditForm = profileEditModal.querySelector(".modal__form");
@@ -63,8 +65,8 @@ profileEditButton.addEventListener("click", () => {
   profileEditModal.classList.add("modal_opened");
 });
 
-cardAddButton.addEventListener ("click", () => {
-  openPopup(cardEditModal)
+function openPopup(popup) {
+  popup.classList.add("modal_opened")
 }
 const cardModalClose = document.querySelector("#card-modal-close");
 
