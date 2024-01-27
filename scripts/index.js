@@ -70,9 +70,40 @@ function openPopup(popup) {
 }
 const cardModalClose = document.querySelector("#card-modal-close");
 
-cardModalClose.addEventListener("click", () => {
-  console.log("Hello World")
+// ... (your existing code)
+
+const cardImageUrlInput = cardEditModal.querySelector("#modal__input-image-url");
+
+cardAddButton.addEventListener("click", () => {
   openPopup(cardEditModal);
+});
+
+// Modify the function to handle adding a card
+function addCard() {
+  const cardData = {
+    name: "Custom Card",
+    link: cardImageUrlInput.value,
+  };
+
+  const cardElement = getCardElement(cardData);
+  cardListEl.prepend(cardElement);
+
+
+  closePopup(cardEditModal);
+
+
+  cardImageUrlInput.value = "";
+}
+
+const cardModalClose = cardEditModal.querySelector("#card-modal-close");
+cardModalClose.addEventListener("click", () => {
+  closePopup(cardEditModal);
+});
+
+const cardEditForm = cardEditModal.querySelector("#modal-card-edit-form");
+cardEditForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  addCard();
 });
 
 profileModalClose.addEventListener("click", () => {
