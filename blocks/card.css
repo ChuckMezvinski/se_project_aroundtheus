@@ -45,6 +45,9 @@
   background-position: center;
   border: none;
 }
+.card__icon_active {
+  background: url("../images/likeActive.png");
+}
 .card__icon:hover {
   opacity: 0.5;
 }
