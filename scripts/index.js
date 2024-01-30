@@ -78,7 +78,7 @@ function getCardElement(cardData) {
 }
 
 function deleteCard(e) {
-  e.remove;
+  e.remove();
 }
 
 profileEditButton.addEventListener("click", () => {
@@ -97,7 +97,7 @@ profileEditForm.addEventListener("submit", (e) => {
   closePopup();
 });
 
-cardEditForm.addEventListener("sumbit", (e) => {
+cardEditForm.addEventListener("submit", (e) => {
   cardModalClose(cardEditModal);
   e.preventDefault();
   const cardData = {
