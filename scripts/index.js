@@ -55,7 +55,6 @@ function closePopup() {
 }
 cardModalClose.addEventListener("click", (e) => {
   e.preventDefault();
-  // modal is not defined
   closePopup(cardAddButton);
 });
 profileModalClose.addEventListener("click", () => {
@@ -101,7 +100,8 @@ profileEditForm.addEventListener("submit", (e) => {
 
 cardEditForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  cardModalClose(cardEditModal);
+  cardModalClose.click(cardEditModal);
+  closePopup();
   const cardData = {
     name: cardTitle.value,
     link: cardUrl.value,
