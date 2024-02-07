@@ -8,10 +8,16 @@
   z-index: 999;
   padding: 0, 19px, 0, 19px;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  visibility: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 .modal_opened {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 .modal__container {
   position: relative;
@@ -37,6 +43,8 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.modal__close:hover {
+}
 .modal__heading {
   font-family: "inter", Arial, Helvetica, sans-serif;
   font-weight: 900;
@@ -58,6 +66,9 @@
   color: #fff;
   border: none;
   display: block;
+  cursor: pointer;
+}
+.modal__button:hover {
 }
 .modal__input {
   font-family: "inter", Arial, Helvetica, sans-serif;
