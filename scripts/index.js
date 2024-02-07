@@ -72,9 +72,15 @@ function getCardElement(cardData) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const likeButton = cardElement.querySelector(".card__icon");
   cardImageEl.addEventListener("click", () => {
-    openFullView(cardData.link);
+    openFullView(cardData.link, cardData.name);
   });
-
+  function openFullView(imageUrl, title) {
+    $.fancybox.open({
+      src: imageUrl,
+      type: "image",
+      caption: title,
+    });
+  }
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__icon_active");
   });
