@@ -44,6 +44,7 @@
   background-size: contain;
 }
 .modal__close:hover {
+  opacity: 0.8;
 }
 .modal__heading {
   font-family: "inter", Arial, Helvetica, sans-serif;
@@ -69,6 +70,7 @@
   cursor: pointer;
 }
 .modal__button:hover {
+  opacity: 0.8;
 }
 .modal__input {
   font-family: "inter", Arial, Helvetica, sans-serif;
