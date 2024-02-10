@@ -47,28 +47,37 @@
   background-position: center;
   border: none;
 }
-
-.card__icon_active {
-  background: url("../images/likeActive.png");
-}
 .card__icon:hover {
   opacity: 0.5;
 }
-.card__delete {
+
+.card__icon-button_active {
+  background-image: url(../images/likeActive.png);
+}
+
+.card__delete-button {
   cursor: pointer;
-  position: absolute;
   display: flex;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
+  position: absolute;
   background-image: url(../images/delete-icon.png);
-  border: none;
   width: 18px;
   height: 19px;
   top: 18px;
   right: 15px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
 }
-.card__delete:hover {
+
+.card__delete-button:hover {
   opacity: 0.5;
+}
+
+.card__image-button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
 }

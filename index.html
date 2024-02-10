@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Around the US</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   </head>
   <body class="page">
     <div class="page__wrapper">
@@ -34,11 +27,7 @@
             <button class="profile__arrow" type="button"></button>
             <p class="profile__subheading">Explorer</p>
           </div>
-          <button
-            class="profile__add-button"
-            id="add-button"
-            type="button"
-          ></button>
+          <button class="profile__add-button" type="button"></button>
         </section>
         <ul class="card-wrapper"></ul>
       </main>
@@ -46,57 +35,104 @@
         <p class="footer__copyright">&copy;Dalton Robertson</p>
       </footer>
     </div>
-    <div class="modal" id="modal-edit">
+    <div class="modal" id="profileModal">
       <div class="modal__container">
-        <form class="modal__form" id="modal-profile-form">
-          <button class="modal__close" id="profile-modal-close"></button>
-          <h3 class="modal__heading">Edit Profile</h3>
+        <button
+          class="modal__close"
+          id="profile-modal__close"
+          type="button"
+        ></button>
+        <h3 class="modal__heading">Edit Profile</h3>
+        <form class="modal__form" name="profileModalForm">
           <input
-            type="text"
             class="modal__input"
-            name="title"
+            id="profileModal__input-name"
+            type="text"
+            name="heading"
             placeholder="Name"
-            id="modal__input-name"
+            minlength="2"
+            maxlength="40"
+            required
           />
+          <span
+            class="modal__input-error"
+            id="profileModal__input-name-error"
+          ></span>
           <input
-            type="text"
             class="modal__input"
+            id="profileModal__input-description"
+            type="text"
             name="subheading"
-            placeholder="Description"
-            id="modal__input-description"
+            placeholder="About"
+            minlength="2"
+            maxlength="200"
+            required
           />
-          <button class="modal__button">Save</button>
+          <span
+            class="modal__input-error"
+            id="profileModal__input-description-error"
+          ></span>
+          <button class="modal__button" id="profileModal__button" type="submit">
+            Save
+          </button>
         </form>
       </div>
     </div>
-    <div class="modal" id="modal-card-edit">
+    <div class="modal" id="cardModal">
       <div class="modal__container">
-        <form class="modal__form" id="modal-card-form">
-          <button class="modal__close" id="card-modal-close"></button>
-          <h3 class="modal__heading">New Place</h3>
+        <button
+          class="modal__close"
+          id="card-modal__close"
+          type="button"
+        ></button>
+        <h3 class="modal__heading">New Place</h3>
+        <form class="modal__form" name="cardModalForm">
           <input
-            type="text"
             class="modal__input"
-            name="title"
+            id="card-modal__input-title"
+            type="text"
+            name="heading"
             placeholder="Title"
-            id="card__image-title"
+            minlength="1"
+            maxlength="30"
+            required
           />
+          <span
+            class="modal__input-error"
+            id="card-modal__input-title-error"
+          ></span>
           <input
-            type="text"
             class="modal__input"
-            name="Link"
-            placeholder="Image Link"
-            id="card__image-url"
+            id="card-modal__input-imagelink"
+            type="url"
+            name="subheading"
+            placeholder="Image link"
+            required
           />
-          <button class="modal__button" type="submit">Save</button>
+          <span
+            class="modal__input-error"
+            id="card-modal__input-imagelink-error"
+          ></span>
+          <button class="modal__button" id="cardModal__button" type="submit">
+            Create
+          </button>
         </form>
+      </div>
+    </div>
+    <div class="modal cardImage__modal" id="imageModal">
+      <div class="modal__cardImage_container">
+        <img src="" alt="" class="cardImage__modal-image" />
+        <button
+          class="modal__close cardImage__imageModalButton"
+          type="button"
+        ></button>
+        <p class="card__imageModal-text"></p>
       </div>
     </div>
     <template id="card-template">
       <li class="card">
-        <button class="card__delete" type="button"></button>
         <img src="" alt="" class="card__image" />
-
+        <button class="card__delete-button" type="button"></button>
         <div class="card__caption">
           <h2 class="card__title"></h2>
           <button class="card__icon" type="button"></button>
@@ -104,5 +140,6 @@
       </li>
     </template>
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validation.js" defer></script>
   </body>
 </html>
