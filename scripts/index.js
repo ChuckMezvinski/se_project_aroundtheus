@@ -56,7 +56,7 @@ const cardTemplate =
 const cardListEl = document.querySelector(".card-wrapper");
 
 const cardModalImage = document.querySelector(".cardImage__modal-image");
-const imageModaltext = document.querySelector(".card__imageModal-text");
+const imageModalText = document.querySelector(".card__imageModal-text");
 
 // EVENT HANDLERS
 function openModal(modal) {
@@ -126,7 +126,7 @@ function getCardElement(cardData) {
 function handleImageClick(imageData) {
   openModal(cardImageModal);
   cardModalImage.src = imageData.link;
-  imageModaltext.textContent = imageData.name;
+  imageModalText.textContent = imageData.name;
   cardModalImage.alt = imageData.alt;
 }
 
