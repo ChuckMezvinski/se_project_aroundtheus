@@ -33,7 +33,7 @@ const cardTitle = document.querySelector(".card__title");
 const cardLink = document.querySelector(".card__image");
 const cardModalTitle = document.querySelector("#card-modal__input-title");
 const cardModalLink = document.querySelector("#card-modal__input-imagelink");
-const cardModalClose = document.querySelector("#card-modal__close");
+// const cardModalClose = document.querySelector("#card-modal__close");
 const cardModalSave = document.querySelector("#cardModal__button");
 const cardsWrap = document.querySelector(".card-wrapper");
 const likeButton = document.querySelectorAll(".card__icon");
@@ -48,7 +48,7 @@ const modalInputDescription = document.querySelector(
   "#profileModal__input-description"
 );
 
-const profileModalClose = document.querySelector("#profile-modal__close");
+// const profileModalClose = document.querySelector("#profile-modal__close");
 const profileModalForm = document.forms["profileModalForm"];
 const cardModalForm = document.forms["cardModalForm"];
 const cardTemplate =
@@ -56,15 +56,19 @@ const cardTemplate =
 const cardListEl = document.querySelector(".card-wrapper");
 
 const cardModalImage = document.querySelector(".cardImage__modal-image");
+const imageModal = document.querySelector("#imageModal");
 const imageModalText = document.querySelector(".card__imageModal-text");
 
 // EVENT HANDLERS
 function openModal(modal) {
   modal.classList.add("modal_opened");
+
+  const closeButton = modal.querySelector(".modal__close");
+  closeButton.addEventListener("click", () => closeModal());
 }
 
-function closeModal(modal) {
-  modal.classList.remove("modal_opened");
+function closeModal() {
+  document.querySelector(".modal_opened").classList.remove("modal_opened");
 }
 
 addCardButton.addEventListener("click", () => {
@@ -122,7 +126,7 @@ function getCardElement(cardData) {
 }
 
 function handleImageClick(imageData) {
-  openModal(cardImageModal);
+  openModal(imageModal);
   cardModalImage.src = imageData.link;
   imageModalText.textContent = imageData.name;
   cardModalImage.alt = imageData.alt;
